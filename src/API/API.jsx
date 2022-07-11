@@ -2,7 +2,7 @@ import axios from 'axios';
 import Notiflix from 'notiflix';
 
 const URL = 'https://pixabay.com/api/';
-const KEY = `27513369-b4299cf044d06764b30420eb5`;
+const KEY = `27695920-aa8882011fbc25a0de57751fe`;
 
 export const params = {
   q: '',
