@@ -5,10 +5,11 @@ export const Loader = () => {
   return (
     <LoaderContainer>
       <CgSearchLoading
-        color="#000"
+        color="#1100ff"
         height={100}
         width={100}
         timeout={3000}
+        size={300}
       />
     </LoaderContainer>
   );
