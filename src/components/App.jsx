@@ -6,6 +6,7 @@ import * as API from '../API/API';
 import { Loader } from "./Loader/Loader";
 import { Button } from "./Button/Button";
 import { Modal } from "./Modal/Modal";
+import Notiflix from "notiflix";
 
 
 export class App extends Component { 
@@ -70,6 +71,7 @@ export class App extends Component {
     this.setState({ query: value });
   }; 
   this.setState({ status: 'rejected', items: [] });
+  return Notiflix.Notify.failure('Please, enter search query.');
 ;}
 
   toggleLargeMode = picData => {
