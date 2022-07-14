@@ -66,8 +66,11 @@ export class App extends Component {
   }
 
   setQuery = value => {
+    if (value.trim() !== '') {
     this.setState({ query: value });
-  };
+  }; 
+  this.setState({ status: 'rejected', items: [] });
+;}
 
   toggleLargeMode = picData => {
     this.setState(({ showLargePic }) => ({

@@ -20,6 +20,7 @@ return (
             this.props.onSubmit(values.search);
             actions.setSubmitting(false);
           }}
+          
         >
         {({ isSubmitting }) => (
         <SearchForm>
