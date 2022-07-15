@@ -8,7 +8,6 @@ import {
     ButtonSearch,
 } from "./Searchbar-styled";
 import { AiOutlineSearch } from "@react-icons/all-files/ai/AiOutlineSearch";
-import Notiflix from "notiflix";
 
 
 export class Searchbar extends Component {
@@ -21,9 +20,7 @@ return (
             onSubmit={(values, actions) => {
             this.props.onSubmit(values.search);
             actions.setSubmitting(false);
-            if (values.query.trim() === '') {
-            return Notiflix.Notify.failure('Please, enter search query.');
-          }}}
+          }}
           
         >
         {({ isSubmitting }) => (

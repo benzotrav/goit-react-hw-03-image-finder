@@ -59,7 +59,11 @@ export class App extends Component {
             isLoading: false,
           }));
         }
-      } catch (error) {
+        if (total === 0) {
+        return Notiflix.Notify.failure('Sorry, we cant find anything for you')
+        };
+      } 
+      catch (error) {
         this.setState({ error: true, isLoading: false });
         console.log(error);
       }
@@ -71,7 +75,6 @@ export class App extends Component {
     this.setState({ query: value });
   }; 
   this.setState({ status: 'rejected', items: [] });
-  return Notiflix.Notify.failure('Please, enter search query.');
 ;}
 
   toggleLargeMode = picData => {
