@@ -66,6 +66,7 @@ export class App extends Component {
       catch (error) {
         this.setState({ error: true, isLoading: false });
         console.log(error);
+        Notiflix.Notify.failure(`Sorry, try again - ${error.message} `);
       }
     }
   }

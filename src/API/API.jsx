@@ -1,5 +1,4 @@
 import axios from 'axios';
-import Notiflix from 'notiflix';
 
 const URL = 'https://pixabay.com/api/';
 const KEY = `27695920-aa8882011fbc25a0de57751fe`;
@@ -21,14 +20,11 @@ const customAxios = axios.create({
 });
 
 export const getData = async params => {
-  try {
-    const response = await customAxios.get('', {
+
+    const { data } = await customAxios.get('', {
       params,
     });
 
-    return response.data;
-  } catch (error) {
-    Notiflix.Notify.failure(`Sorry, try again ${error} `);
-    throw new Error(`Sorry, try again ${error}`);
-  }
+    return data;
+  
 };
